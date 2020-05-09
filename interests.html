@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="navbar.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  .title-container {
+    position: relative;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 20px;
+  }
+
+  .container {
+    display: grid;
+
+    grid-template-rows: var(--grid-length) var(--grid-length) var(--grid-length);
+    grid-template-columns: var(--grid-length) auto var(--grid-length);
+    grid-gap: 1rem;
+
+    border-radius: 20px;
+  }
+
+  .heading-left {
+  /*   padding: var(--item-padding); */
+    color: var(--text-primary);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-radius: inherit;
+    background: var(--primary-color);
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .heading-right {
+  /*   padding: var(--item-padding); */
+    color: var(--text-primary);
+    grid-column-start: 3;
+    grid-column-end: 4;
+    border-radius: inherit;
+    background: var(--primary-color);
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .body-right {
+    padding: var(--item-padding);
+    color: white;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-radius: inherit;
+    background: var(--bg-item);
+  }
+
+  .body-left {
+    padding: var(--item-padding);
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border-radius: inherit;
+    background: var(--bg-item);
+  }
+
+  .computer-science-item {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .minecraft-item {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .lego-item {
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+</style>
+<body>
+  <nav class="navbar">
+    <ul class="navbar-nav">
+      <li class="logo">
+        <a href="index.html" class="nav-link logo-link">
+          <span class="link-text"> Mario Velez </span>
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-right" class="" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"/></svg>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="interests.html" class="nav-link">
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="laptop-code" class="fa-primary" role="img" viewBox="0 0 640 512"><path fill="currentColor" d="M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3l11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg>
+          <span class="link-text"> Interests </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="achievements.html" class="nav-link">
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="medal" class="fa-primary" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M223.75 130.75L154.62 15.54A31.997 31.997 0 0 0 127.18 0H16.03C3.08 0-4.5 14.57 2.92 25.18l111.27 158.96c29.72-27.77 67.52-46.83 109.56-53.39zM495.97 0H384.82c-11.24 0-21.66 5.9-27.44 15.54l-69.13 115.21c42.04 6.56 79.84 25.62 109.56 53.38L509.08 25.18C516.5 14.57 508.92 0 495.97 0zM256 160c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm92.52 157.26l-37.93 36.96 8.97 52.22c1.6 9.36-8.26 16.51-16.65 12.09L256 393.88l-46.9 24.65c-8.4 4.45-18.25-2.74-16.65-12.09l8.97-52.22-37.93-36.96c-6.82-6.64-3.05-18.23 6.35-19.59l52.43-7.64 23.43-47.52c2.11-4.28 6.19-6.39 10.28-6.39 4.11 0 8.22 2.14 10.33 6.39l23.43 47.52 52.43 7.64c9.4 1.36 13.17 12.95 6.35 19.59z"/></svg>
+          <span class="link-text"> Achievements </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="projects.html" class="nav-link">
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-tie" class="fa-primary" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.6L272 480l-32-136 32-56h-96l32 56-32 136-47.8-191.4C56.9 292 0 350.3 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z"/></svg>
+          <span class="link-text"> Projects </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="title-container">
+    <h1> My Interests </h1>
+    <div class="container">
+      <div class="heading-left computer-science-item computer-science-title">
+        <img src="https://c1.wallpaperflare.com/preview/386/795/704/code-programming-computer-computer-science.jpg" width=100% alt="">
+      </div>
+      <div class="body-right computer-science-item">
+        Computer Science
+        <p> Probably my biggest interests is computer science. I like coding things like games, algorithms, or some sort of cool graphics. </p>
+      </div>
+      <div class="heading-right minecraft-item">
+        <img src="https://cdn.pixabay.com/photo/2017/02/10/00/03/minecraft-2053882_960_720.jpg" height=100% alt="">
+      </div>
+      <div class="body-left minecraft-item">
+        Minecraft
+        <p> Minecraft is a game that I play casually just for fun. I also watch videos about it. </p>
+      </div>
+      <div class="heading-left lego-item">
+        <img src="https://storage.needpix.com/rsynced_images/lego-2413642_1280.jpg" height=100% alt="">
+      </div>
+      <div class="body-right lego-item">
+        LEGO
+        <p> I have spent around 13 years of my life collecting pieces. I like challenging myself to see what I can create. </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
