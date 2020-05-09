@@ -8,6 +8,8 @@
   --bg-body: white;
   --bg-item: #23262b; /*dark bluish gray*/
   --transition-speed: 400ms ease;
+  --grid-length: 10rem;
+  --item-padding: 1rem;
 }
 
 body {
