@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" type="text/css" href="navbar.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
+<style>
+  .container {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+  }
+
+  section {
+    position: absolute;
+    width: calc(100% - 5rem - 4px);
+    height: 100%;
+    display: flex;
+    border: 2px solid black;
+  }
+
+  section .slide {
+    position: relative;
+    background-color: #0f0;
+    height: 100%;
+    flex: 1;
+    border-right: 2px solid black;
+    overflow: hidden;
+    transition: var(--transition-speed);
+  }
+
+  section .slide:last-child {
+    border-right: none;
+  }
+
+  section .slide:hover {
+    flex-grow: 5;
+  }
+
+  section .slide:nth-child(1) {
+    background: url("achievement images/confirmation_image.JPG");
+    background-position: center center;
+  }
+
+  section .slide:nth-child(2) {
+    background: url("achievement images/bowling_image.JPG");
+    background-position: center center;
+  }
+
+  section .slide:nth-child(3) {
+    background: url("achievement images/boy_scouts.JPG");
+    background-position: center center;
+  }
+
+  section .slide .content {
+    position: absolute;
+    bottom: 0;
+    margin: 40px;
+    padding: 30px;
+    text-align: center;
+    background: black;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0s;
+    transform: translateY(100px);
+  }
+
+  section .slide:hover .content {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    transform: translateY(0);
+  }
+</style>
 <body>
   <nav class="navbar">
     <ul class="navbar-nav">
