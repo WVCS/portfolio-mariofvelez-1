@@ -13,7 +13,6 @@
 }
 
 body {
-  display: flex;
   color: black;
   background: var(--bg-body);
   margin: 0;
